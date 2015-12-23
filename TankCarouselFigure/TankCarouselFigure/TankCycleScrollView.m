@@ -24,8 +24,8 @@
 @property (nonatomic, strong) NSMutableArray *contentViews;
 //总图片控件数组
 @property (nonatomic, strong) NSMutableArray *subContentViews;
-//点击页码
-@property (nonatomic, assign) NSInteger currentSelectIndex;
+////点击页码
+//@property (nonatomic, assign) NSInteger currentSelectIndex;
 //实际滚动焦点图数组
 @property (nonatomic, strong) NSMutableArray *cycleCarouselArray;
 //当前请求失败次数
@@ -130,6 +130,11 @@
         pageControl.hidden = YES;
     }
     
+}
+
+- (void)setModelArray:(NSArray *)modelArray
+{
+    _modelArray = modelArray;
 }
 
 - (void)setCycleImageArray:(NSArray *)cycleImageArray
@@ -387,8 +392,19 @@
 - (void)contentViewTapAction:(UITapGestureRecognizer *)tap
 {
     if (self.TapActionBlock) {
-        self.currentSelectIndex = self.currentPageIndex;
-        self.TapActionBlock(self.currentPageIndex);
+        NSInteger currentSelectIndex;
+        id model;
+        if (self.modelArray.count > 2) {
+            model = [self.modelArray objectAtIndex:self.currentPageIndex];
+            currentSelectIndex = self.currentPageIndex;
+        } else if (self.modelArray.count == 2) {
+            model = [self.modelArray objectAtIndex:self.currentPageIndex%2];
+            currentSelectIndex = self.currentPageIndex%2;
+        } else {
+            model = [self.modelArray objectAtIndex:0];
+            currentSelectIndex = 0;
+        }
+        self.TapActionBlock(currentSelectIndex,model);
     }
 }
 

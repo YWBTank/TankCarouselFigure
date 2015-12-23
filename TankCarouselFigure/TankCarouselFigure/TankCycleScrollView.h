@@ -38,7 +38,7 @@ typedef enum {
 /**
  当点击的时候，执行的block
  **/
-@property (nonatomic , copy) void (^TapActionBlock)(NSInteger pageIndex);
+@property (nonatomic , copy) void (^TapActionBlock)(NSInteger pageIndex, id model);
 
 
 //图片数组
@@ -46,6 +46,9 @@ typedef enum {
 
 //图片路径数组
 @property (nonatomic, strong) NSArray *cycleImageUrlArray;
+
+//预防点击做一些动作 增添这个属性  应与图片数组的数量一致并且一一对应
+@property (nonatomic, strong) NSArray *modelArray;
 
 //设定加载失败次数(范围内尝试重新加载)
 @property (nonatomic, assign) NSInteger networkFailedCount;

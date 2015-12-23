@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "TankCycleScrollView.h"
+#import "TankCycleImageModel.h"
 
 @interface ViewController () <UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, weak) UITableView *mainTableView;
@@ -33,8 +34,8 @@
     cycleView.cycleScrollPageControlAliment = TankCyclePageContolAlimentRight;
     self.cycleView = cycleView;
     cycleView.enbleStretch = YES;
-    cycleView.TapActionBlock = ^(NSInteger pageIndex){
-        NSLog(@"%d",pageIndex);
+    cycleView.TapActionBlock = ^(NSInteger pageIndex, id model){
+        NSLog(@"%d ,%@",pageIndex,[(TankCycleImageModel *)model attractionId]);
     };
     
 //    NSMutableArray *imageArray = [NSMutableArray array];
@@ -43,13 +44,28 @@
 //        UIImage *image = [UIImage imageNamed:imageName];
 //        [imageArray addObject:image];
 //    }
-//    cycleView.cycleImageArray = imageArray;
-    cycleView.cycleImageUrlArray =@[
+
+    NSArray *imageArray =@[
                                     @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
                                     @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
                                     @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
                                     ];
-
+    cycleView.cycleImageUrlArray = imageArray;
+    NSMutableArray *cycleImageModelArray = [NSMutableArray array];
+    for (int i = 0; i < imageArray.count; i++) {
+        TankCycleImageModel *cycleImageModel = [[TankCycleImageModel alloc] init];
+        cycleImageModel.attractionId = [NSString stringWithFormat:@"%d",i];
+        cycleImageModel.imageUrl = imageArray[i];
+        cycleImageModel.linkUrl = imageArray[i];
+        cycleImageModel.title = [NSString stringWithFormat:@"%d",i];
+        cycleImageModel.jumpType = @"HTML";
+        [cycleImageModelArray addObject:cycleImageModel];
+    }
+    
+    //既可以不传自己再block操作 也可以传递获取model  model自己定义
+//    cycleView.modelArray = cycleImageModelArray;
+    
+    
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
     self.mainTableView.tableHeaderView = headerView;
     headerView.userInteractionEnabled = YES;

@@ -33,6 +33,7 @@
 		37D87F181C2A4CE3007D2081 /* h3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37D87F141C2A4CE3007D2081 /* h3.jpg */; };
 		37D87F191C2A4CE3007D2081 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37D87F151C2A4CE3007D2081 /* h2.jpg */; };
 		37D87F1A1C2A4CE3007D2081 /* h4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37D87F161C2A4CE3007D2081 /* h4.jpg */; };
+		37D87F1D1C2AB758007D2081 /* TankCycleImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +84,8 @@
 		37D87F141C2A4CE3007D2081 /* h3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h3.jpg; sourceTree = "<group>"; };
 		37D87F151C2A4CE3007D2081 /* h2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h2.jpg; sourceTree = "<group>"; };
 		37D87F161C2A4CE3007D2081 /* h4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h4.jpg; sourceTree = "<group>"; };
+		37D87F1B1C2AB758007D2081 /* TankCycleImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankCycleImageModel.h; sourceTree = "<group>"; };
+		37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankCycleImageModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +125,8 @@
 				37D87EE71C2A4780007D2081 /* SDWebImage */,
 				37D87EDE1C2A3EDE007D2081 /* TankCycleScrollView.h */,
 				37D87EDF1C2A3EDE007D2081 /* TankCycleScrollView.m */,
+				37D87F1B1C2AB758007D2081 /* TankCycleImageModel.h */,
+				37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */,
 				37D87EE41C2A4197007D2081 /* NSTimer+Control.h */,
 				37D87EE51C2A4197007D2081 /* NSTimer+Control.m */,
 				37D87ED01C2A3D3E007D2081 /* Main.storyboard */,
@@ -273,6 +278,7 @@
 				37D87F111C2A4780007D2081 /* UIImageView+WebCache.m in Sources */,
 				37D87F0B1C2A4780007D2081 /* SDWebImageManager.m in Sources */,
 				37D87F081C2A4780007D2081 /* SDWebImageDecoder.m in Sources */,
+				37D87F1D1C2AB758007D2081 /* TankCycleImageModel.m in Sources */,
 				37D87F061C2A4780007D2081 /* SDImageCache.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,6 +426,7 @@
 				37D87EDD1C2A3D3E007D2081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
