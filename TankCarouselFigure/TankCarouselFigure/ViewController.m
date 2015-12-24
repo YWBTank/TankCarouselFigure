@@ -33,7 +33,8 @@
     TankCycleScrollView *cycleView = [[TankCycleScrollView alloc] initWithFrame:CGRectMake(10, 0, [UIScreen mainScreen].bounds.size.width - 20, 200) animationDuration:2];
     cycleView.cycleScrollPageControlAliment = TankCyclePageContolAlimentCenter;
     self.cycleView = cycleView;
-    cycleView.enbleStretch = YES;
+//    cycleView.enbleStretch = YES;
+    
     cycleView.TapActionBlock = ^(NSInteger pageIndex, id model){
         NSLog(@"%d ,%@",pageIndex,[(TankCycleImageModel *)model attractionId]);
     };

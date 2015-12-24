@@ -114,9 +114,9 @@
     pageControl.numberOfPages = self.totalPageCount;
     self.pageControl = pageControl;
     if (self.cycleScrollPageControlAliment == TankCyclePageContolAlimentCenter) {
-        pageControl.frame = CGRectMake((CGRectGetWidth(self.frame) - 100) * 0.5, CGRectGetHeight(self.frame) - 40, 100, 40);
+        pageControl.frame = CGRectMake((CGRectGetWidth(self.frame) - 100) * 0.5, CGRectGetHeight(self.frame) - 30, 100, 30);
     } else {
-        pageControl.frame = CGRectMake(CGRectGetWidth(self.frame) - 120, CGRectGetHeight(self.frame) - 40, 100, 40);
+        pageControl.frame = CGRectMake(CGRectGetWidth(self.frame) - 120, CGRectGetHeight(self.frame) - 30, 100, 30);
     }
     [self addSubview:self.pageControl];
     

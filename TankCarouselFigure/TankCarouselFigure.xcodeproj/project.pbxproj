@@ -13,8 +13,6 @@
 		37D87ED21C2A3D3E007D2081 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D87ED01C2A3D3E007D2081 /* Main.storyboard */; };
 		37D87ED41C2A3D3E007D2081 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37D87ED31C2A3D3E007D2081 /* Assets.xcassets */; };
 		37D87ED71C2A3D3E007D2081 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37D87ED51C2A3D3E007D2081 /* LaunchScreen.storyboard */; };
-		37D87EE01C2A3EDE007D2081 /* TankCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87EDF1C2A3EDE007D2081 /* TankCycleScrollView.m */; };
-		37D87EE61C2A4197007D2081 /* NSTimer+Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87EE51C2A4197007D2081 /* NSTimer+Control.m */; };
 		37D87F051C2A4780007D2081 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87EE91C2A4780007D2081 /* NSData+ImageContentType.m */; };
 		37D87F061C2A4780007D2081 /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87EEB1C2A4780007D2081 /* SDImageCache.m */; };
 		37D87F071C2A4780007D2081 /* SDWebImageCompat.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87EED1C2A4780007D2081 /* SDWebImageCompat.m */; };
@@ -34,6 +32,8 @@
 		37D87F191C2A4CE3007D2081 /* h2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37D87F151C2A4CE3007D2081 /* h2.jpg */; };
 		37D87F1A1C2A4CE3007D2081 /* h4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 37D87F161C2A4CE3007D2081 /* h4.jpg */; };
 		37D87F1D1C2AB758007D2081 /* TankCycleImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */; };
+		37EFCB411C2B8F8A00DD986D /* NSTimer+Control.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFCB3E1C2B8F8A00DD986D /* NSTimer+Control.m */; };
+		37EFCB421C2B8F8A00DD986D /* TankCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EFCB401C2B8F8A00DD986D /* TankCycleScrollView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,10 +47,6 @@
 		37D87ED31C2A3D3E007D2081 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37D87ED61C2A3D3E007D2081 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37D87ED81C2A3D3E007D2081 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		37D87EDE1C2A3EDE007D2081 /* TankCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankCycleScrollView.h; sourceTree = "<group>"; };
-		37D87EDF1C2A3EDE007D2081 /* TankCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankCycleScrollView.m; sourceTree = "<group>"; };
-		37D87EE41C2A4197007D2081 /* NSTimer+Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Control.h"; sourceTree = "<group>"; };
-		37D87EE51C2A4197007D2081 /* NSTimer+Control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Control.m"; sourceTree = "<group>"; };
 		37D87EE81C2A4780007D2081 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
 		37D87EE91C2A4780007D2081 /* NSData+ImageContentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+ImageContentType.m"; sourceTree = "<group>"; };
 		37D87EEA1C2A4780007D2081 /* SDImageCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDImageCache.h; sourceTree = "<group>"; };
@@ -86,6 +82,10 @@
 		37D87F161C2A4CE3007D2081 /* h4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = h4.jpg; sourceTree = "<group>"; };
 		37D87F1B1C2AB758007D2081 /* TankCycleImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankCycleImageModel.h; sourceTree = "<group>"; };
 		37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankCycleImageModel.m; sourceTree = "<group>"; };
+		37EFCB3D1C2B8F8A00DD986D /* NSTimer+Control.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+Control.h"; sourceTree = "<group>"; };
+		37EFCB3E1C2B8F8A00DD986D /* NSTimer+Control.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Control.m"; sourceTree = "<group>"; };
+		37EFCB3F1C2B8F8A00DD986D /* TankCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TankCycleScrollView.h; sourceTree = "<group>"; };
+		37EFCB401C2B8F8A00DD986D /* TankCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TankCycleScrollView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,17 +118,14 @@
 		37D87EC61C2A3D3E007D2081 /* TankCarouselFigure */ = {
 			isa = PBXGroup;
 			children = (
+				37EFCB3C1C2B8F8A00DD986D /* TankCarouselFigure */,
 				37D87ECA1C2A3D3E007D2081 /* AppDelegate.h */,
 				37D87ECB1C2A3D3E007D2081 /* AppDelegate.m */,
 				37D87ECD1C2A3D3E007D2081 /* ViewController.h */,
 				37D87ECE1C2A3D3E007D2081 /* ViewController.m */,
 				37D87EE71C2A4780007D2081 /* SDWebImage */,
-				37D87EDE1C2A3EDE007D2081 /* TankCycleScrollView.h */,
-				37D87EDF1C2A3EDE007D2081 /* TankCycleScrollView.m */,
 				37D87F1B1C2AB758007D2081 /* TankCycleImageModel.h */,
 				37D87F1C1C2AB758007D2081 /* TankCycleImageModel.m */,
-				37D87EE41C2A4197007D2081 /* NSTimer+Control.h */,
-				37D87EE51C2A4197007D2081 /* NSTimer+Control.m */,
 				37D87ED01C2A3D3E007D2081 /* Main.storyboard */,
 				37D87ED31C2A3D3E007D2081 /* Assets.xcassets */,
 				37D87F131C2A4CE3007D2081 /* h1.jpg */,
@@ -184,6 +181,17 @@
 				37D87F041C2A4780007D2081 /* UIView+WebCacheOperation.m */,
 			);
 			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		37EFCB3C1C2B8F8A00DD986D /* TankCarouselFigure */ = {
+			isa = PBXGroup;
+			children = (
+				37EFCB3D1C2B8F8A00DD986D /* NSTimer+Control.h */,
+				37EFCB3E1C2B8F8A00DD986D /* NSTimer+Control.m */,
+				37EFCB3F1C2B8F8A00DD986D /* TankCycleScrollView.h */,
+				37EFCB401C2B8F8A00DD986D /* TankCycleScrollView.m */,
+			);
+			path = TankCarouselFigure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,21 +271,21 @@
 				37D87F101C2A4780007D2081 /* UIImageView+HighlightedWebCache.m in Sources */,
 				37D87F0F1C2A4780007D2081 /* UIImage+MultiFormat.m in Sources */,
 				37D87F0A1C2A4780007D2081 /* SDWebImageDownloaderOperation.m in Sources */,
-				37D87EE01C2A3EDE007D2081 /* TankCycleScrollView.m in Sources */,
 				37D87F071C2A4780007D2081 /* SDWebImageCompat.m in Sources */,
 				37D87F121C2A4780007D2081 /* UIView+WebCacheOperation.m in Sources */,
 				37D87F0E1C2A4780007D2081 /* UIImage+GIF.m in Sources */,
 				37D87F0C1C2A4780007D2081 /* SDWebImagePrefetcher.m in Sources */,
 				37D87ECF1C2A3D3E007D2081 /* ViewController.m in Sources */,
+				37EFCB421C2B8F8A00DD986D /* TankCycleScrollView.m in Sources */,
 				37D87ECC1C2A3D3E007D2081 /* AppDelegate.m in Sources */,
 				37D87F091C2A4780007D2081 /* SDWebImageDownloader.m in Sources */,
 				37D87F0D1C2A4780007D2081 /* UIButton+WebCache.m in Sources */,
 				37D87EC91C2A3D3E007D2081 /* main.m in Sources */,
 				37D87F051C2A4780007D2081 /* NSData+ImageContentType.m in Sources */,
-				37D87EE61C2A4197007D2081 /* NSTimer+Control.m in Sources */,
 				37D87F111C2A4780007D2081 /* UIImageView+WebCache.m in Sources */,
 				37D87F0B1C2A4780007D2081 /* SDWebImageManager.m in Sources */,
 				37D87F081C2A4780007D2081 /* SDWebImageDecoder.m in Sources */,
+				37EFCB411C2B8F8A00DD986D /* NSTimer+Control.m in Sources */,
 				37D87F1D1C2AB758007D2081 /* TankCycleImageModel.m in Sources */,
 				37D87F061C2A4780007D2081 /* SDImageCache.m in Sources */,
 			);
