@@ -31,7 +31,7 @@
     [self.view addSubview:mainTableView];
     
     TankCycleScrollView *cycleView = [[TankCycleScrollView alloc] initWithFrame:CGRectMake(10, 0, [UIScreen mainScreen].bounds.size.width - 20, 200) animationDuration:2];
-    cycleView.cycleScrollPageControlAliment = TankCyclePageContolAlimentRight;
+    cycleView.cycleScrollPageControlAliment = TankCyclePageContolAlimentCenter;
     self.cycleView = cycleView;
     cycleView.enbleStretch = YES;
     cycleView.TapActionBlock = ^(NSInteger pageIndex, id model){
@@ -63,7 +63,7 @@
     }
     
     //既可以不传自己再block操作 也可以传递获取model  model自己定义
-//    cycleView.modelArray = cycleImageModelArray;
+    cycleView.modelArray = cycleImageModelArray;
     
     
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];

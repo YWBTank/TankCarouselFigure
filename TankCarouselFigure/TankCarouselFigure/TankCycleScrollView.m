@@ -129,7 +129,7 @@
     } else {
         pageControl.hidden = YES;
     }
-    
+    self.pageControl.currentPage = self.currentPageIndex;
 }
 
 - (void)setModelArray:(NSArray *)modelArray
@@ -326,7 +326,6 @@
             return currentPageIndex;
         }
     }
-    return 0;
 }
 
 #pragma mark -
@@ -393,17 +392,14 @@
 {
     if (self.TapActionBlock) {
         NSInteger currentSelectIndex;
-        id model;
         if (self.modelArray.count > 2) {
-            model = [self.modelArray objectAtIndex:self.currentPageIndex];
             currentSelectIndex = self.currentPageIndex;
         } else if (self.modelArray.count == 2) {
-            model = [self.modelArray objectAtIndex:self.currentPageIndex%2];
             currentSelectIndex = self.currentPageIndex%2;
         } else {
-            model = [self.modelArray objectAtIndex:0];
             currentSelectIndex = 0;
         }
+      id  model = [self.modelArray objectAtIndex:currentSelectIndex];
         self.TapActionBlock(currentSelectIndex,model);
     }
 }
@@ -433,13 +429,14 @@
     CGFloat whpercent = self.orginWidth/self.orginHeight;
     CGFloat height = self.orginHeight - offset;
     CGFloat width = self.orginWidth - offset * whpercent;
-
     if (offset < -1) {
+        [self.animationTimer pauseTimer];
         self.cycleScrollView.hidden = YES;
         self.stretchImageView.hidden = NO;
         self.stretchImageView.image = self.cycleCarouselArray[self.currentPageIndex];
         self.stretchImageView.frame = CGRectMake(offset, offset, width, height);
     } else {
+        [self.animationTimer resumeTimerAfterTimeInterval:2];
         self.cycleScrollView.hidden = NO;
         self.stretchImageView.hidden = YES;
         self.stretchImageView.frame = CGRectZero;
