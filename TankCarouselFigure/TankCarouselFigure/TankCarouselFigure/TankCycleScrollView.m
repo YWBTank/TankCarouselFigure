@@ -82,6 +82,7 @@
         cycleScrollView.delegate = self;
         cycleScrollView.contentOffset = CGPointMake(CGRectGetWidth(cycleScrollView.frame), 0);
         cycleScrollView.pagingEnabled = YES;
+        cycleScrollView.showsHorizontalScrollIndicator = NO;
         [self addSubview:cycleScrollView];
         self.currentPageIndex = 0;
         self.cycleScrollView = cycleScrollView;
@@ -140,6 +141,11 @@
 - (void)setCycleImageArray:(NSArray *)cycleImageArray
 {
     _cycleImageArray = cycleImageArray;
+
+
+    if (cycleImageArray.count==0 || cycleImageArray==nil) {
+        return;
+    }
     
     self.cycleCarouselArray = [NSMutableArray arrayWithArray:cycleImageArray];
     
@@ -151,6 +157,11 @@
 - (void)setCycleImageUrlArray:(NSArray *)cycleImageUrlArray
 {
     _cycleImageUrlArray = cycleImageUrlArray;
+    
+    if (cycleImageUrlArray.count==0 || cycleImageUrlArray==nil) {
+        return;
+    }
+
     
     self.cycleCarouselArray = [NSMutableArray arrayWithCapacity:cycleImageUrlArray.count];
     
@@ -347,6 +358,9 @@
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
+    if (self.cycleCarouselArray.count == 0 || self.cycleCarouselArray==nil) {
+        return;
+    }
     int contentOffsetX = scrollView.contentOffset.x;
     if(contentOffsetX >= (2 * CGRectGetWidth(scrollView.frame))) {
         self.currentPageIndex = [self getValidNextPageIndexWithPageIndex:self.currentPageIndex + 1];

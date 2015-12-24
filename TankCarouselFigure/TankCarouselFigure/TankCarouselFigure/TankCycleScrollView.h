@@ -41,18 +41,20 @@ typedef enum {
 @property (nonatomic , copy) void (^TapActionBlock)(NSInteger pageIndex, id model);
 
 
+#pragma mark - require
 //图片数组
 @property (nonatomic, strong) NSArray *cycleImageArray;
 
 //图片路径数组
 @property (nonatomic, strong) NSArray *cycleImageUrlArray;
 
+#pragma mark - optional
+
 //预防点击做一些动作 增添这个属性  应与图片数组的数量一致并且一一对应
 @property (nonatomic, strong) NSArray *modelArray;
 
 //设定加载失败次数(范围内尝试重新加载)
 @property (nonatomic, assign) NSInteger networkFailedCount;
-
 
 //是否显示pageControl   默认显示
 @property(nonatomic, assign) BOOL showPageControl;
