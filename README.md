@@ -15,8 +15,7 @@
     
 1、直接添加  直接添加到需要添加的View上
 
-2、
-在使用时可以放到UITableView的TableHeaderView 上可以设置拉伸效果   
+2、在使用时可以放到UITableView的TableHeaderView 上可以设置拉伸效果   
 设置拉伸效果时需设置cycleView.enbleStretch = YES;
 并且实现tableview实现UIScrollViewDelegate的- (void)scrollViewDidScroll:(UIScrollView *)scrollView
 
